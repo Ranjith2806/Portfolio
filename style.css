@@ -86,7 +86,9 @@ body {
 header {
   position: fixed;
   width: 100%;
-  top: 0;
+  top:0px;
+  padding-bottom: 0px;
+  padding-top: 0px;
   right: 0;
   z-index: 1000;
   display: flex;
@@ -109,14 +111,10 @@ header.shadow {
   color: var(--text-color);
 }
 
-.logo span {
-  font-size: 1.61rem;
-  font-weight: 600;
-  color: crimson;
-}
 
 .navbar {
   display: flex;
+  padding-bottom: 0px;
 }
 
 .navbar a {
@@ -245,12 +243,96 @@ header.shadow {
   margin-left: 1rem;
 }
 
+/*==================== QUALIFICATION ====================*/
+.qualification_tabs{
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: var(--mb-2);
+}
+.section{
+  padding: 5rem 0 2rem;
+}
+
+.qualification_button{
+  font-size: var(--h3-font-size);
+  cursor: pointer;
+}
+
+.qualification_button:hover{
+  color: var(--first-color);
+}
+
+.qualification_icon{
+  font-size: 1.8rem;
+  margin-right: var(--mb-0-25);
+}
+
+.qualification_data{
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+  column-gap: 1.5rem;
+}
+
+.qualification_title{
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+  color:#7150a7;
+  padding-left: 25px;
+}
+
+.qualification_subtitle{
+  display: inline-block;
+  font-size: var(--small-font-size);
+  margin-bottom: var(--mb-1);
+  color:#2768d9;
+  padding-left: 25px;
+}
+
+/* .qualification_calendar{
+  font-size:0.75rem;
+  color: blue;
+  padding-left: 25px;
+} */
+
+.qualification_rounder{
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  background-color:rgb(77, 16, 199);
+  border-radius: 50%;
+}
+
+.qualification_line{
+  display: block;
+  width: 0.1px;
+  height: 100%;
+  padding-left: 25px;
+  transform: translate(6px, -0px);
+}
+
+.qualification [data-content]{
+  display: none;
+}
+
+.qualification_active[data-content]{
+  display: block;
+}
+
+.qualification_button.qualification_active{
+  color:hsl(var(--hue-color), 69%, 61%);
+}
+
 .skills-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   gap: 2rem;
   margin-top: 4rem;
+  
+}
+
+.section{
+  padding: 10rem 0 5rem;
 }
 
 .skills-img img {
@@ -293,6 +375,9 @@ span {
   border-radius: 0.5rem;
 }
 
+.c-bar {
+  width: 80%;
+}
 .html-bar {
   width: 90%;
 }
@@ -302,12 +387,13 @@ span {
 }
 
 .js-bar {
+  width: 60%;
+}
+
+.mongo-bar {
   width: 50%;
 }
 
-.c-bar {
-  width: 80%;
-}
 
 .services-content {
   display: grid;
@@ -449,10 +535,10 @@ form textarea {
 }
 
 /* For Mobile */
-@media (max-width: 991px) {
-  header {
-    padding: 18px 4%;
-  }
+ @media (max-width: 991px) {
+   header {
+    padding: 8px 1%;
+  }  
 
   section {
     padding: 50px 4%;
